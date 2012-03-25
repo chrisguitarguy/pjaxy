@@ -52,6 +52,8 @@ Pjaxy will look for templates in the same way that WordPress does: check the chi
 
 Let's say your make a request for a single post. Pjaxy first looks in the childtheme directory in `pjax-templates` for `single.php`, the in the parent theme directory for `pjax-templates/single.php`. Same deal for taxonomy pages (including tags and categories).
 
+If you plan on using the built in JS to enable PJAX, just make sure to call `get_pjaxy_page_info` ([pjax.php](https://github.com/chrisguitarguy/pjaxy/blob/master/pjax.php#L43)) at the top of each PJAX template.  This function puts some stuff on the page to change the body class, page title, and header image.
+
 Check out this [twenty eleven child theme](https://github.com/chrisguitarguy/pjaxy-example) for an example.
 
 ## License
