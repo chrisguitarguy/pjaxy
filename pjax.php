@@ -135,7 +135,8 @@ function pjaxy_archive_template( $template )
     if( is_pjax() ) {
         $post_type = get_query_var( 'post_type' );
         $temps = array();
-        if( $post_type ) $temps[] = $post_type;
+
+        if( $post_type ) $temps[] = "archive-{$post_type}.php";
         $temps[] = 'archive.php';
         if( $t = pjaxy_find_template( $temps ) ) {
             $template = $t;
