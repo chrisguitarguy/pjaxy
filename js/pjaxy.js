@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-    jQuery('a').pjax(pjaxy_core.container);
+    jQuery(document).pjax('a', pjaxy_core.container, {timeout: 80000});
     jQuery(pjaxy_core.container).live('pjax:end', function(){
         if(typeof(pjaxy_page_info) != 'undefined') {
             jQuery('body').attr('class', pjaxy_page_info.body_class);
