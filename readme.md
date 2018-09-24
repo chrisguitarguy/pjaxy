@@ -48,7 +48,7 @@ First, Create a `pjax-templates` folder in your theme. This is where your PJAX t
 
 If you've already created your theme, creating a PJAX template is simple.  Open up one of the main theme files (like `index.php`), grab the contents within container that PJAX will update, and paste it into `pjax-templates/index.php`. Alternatively, you could use [template parts](http://codex.wordpress.org/Function_Reference/get_template_part)
 
-Pjaxy will look for templates in the same way that WordPress does: check the child theme directory in `pjax-templates`, then the parent theme, and then fail.  If pjaxy does not fide a template, the page will use the the normal template.  This will cause the PJAX library to do a "hard" reload of the page -- eg. no partial reload or pushState.
+Pjaxy will look for templates in the same way that WordPress does: check the child theme directory in `pjax-templates`, then the parent theme, and then fail.  If pjaxy does not fide a template, the page will use the normal template.  This will cause the PJAX library to do a "hard" reload of the page -- eg. no partial reload or pushState.
 
 Let's say your make a request for a single post. Pjaxy first looks in the childtheme directory in `pjax-templates` for `single.php`, the in the parent theme directory for `pjax-templates/single.php`. Same deal for taxonomy pages (including tags and categories).
 
